@@ -2,8 +2,8 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "rescripts build",
-    "test": "rescripts test",
+    "build": "react-scripts build",
+    "test": "react-scripts  test",
     "eject": "rescripts eject"
   },
   "dependencies": {
