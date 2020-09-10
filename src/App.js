@@ -240,14 +240,14 @@ const App = () => {
       {
         Header: 'Age1',
         accessor: 'age',
-          Filter: SliderColumnFilter,
-          filter: 'equals',
+          Filter: NumberRangeColumnFilter,
+          filter: 'between',
       },
       {
         Header: 'Visits',
         accessor: 'visits',
-          Filter: SliderColumnFilter,
-          filter: 'fuzzyText',
+          Filter: NumberRangeColumnFilter,
+          filter: 'between',
       },
       {
         Header: 'Status',
@@ -259,8 +259,8 @@ const App = () => {
       {
         Header: 'Profile Progress',
         accessor: 'progress',
-          Filter: SliderColumnFilter,
-          filter: 'fuzzyText',
+          Filter: NumberRangeColumnFilter,
+          filter: 'between',
       },
     ],
     []
