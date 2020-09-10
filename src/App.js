@@ -3,7 +3,7 @@ import React from 'react'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import EnhancedTable from './components/EnhancedTable'
 import makeData from './makeData'
-import My from './components/My'
+// import My from './components/My'
 import styled from "styled-components";
 
 
