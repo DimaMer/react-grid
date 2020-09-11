@@ -7,9 +7,13 @@ import BTable from 'react-bootstrap/Table';
 import { useTable } from 'react-table'
 
 import makeData from '../makeData'
+import My from './My'
 
 import 'bootstrap/dist/css/bootstrap.css';
-
+import {Link} from "react-router-dom";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import GridMain from "../gridMain"
 function Table({ columns, data, variant }) {
     // Use the state and functions returned from useTable to build your UI
     const { getTableProps, headerGroups, rows, prepareRow } = useTable({
@@ -95,8 +99,23 @@ function My1() {
     const data = React.useMemo(() => makeData(20), [])
 
     return (
-        <div>
-            <Table columns={columns} data={data} variant="light"/>
+        <div >
+            <Tabs >
+                <TabList>
+                    <Tab>Title 1</Tab>
+                    <Tab>Title 2</Tab>
+                    <Tab>Title 3</Tab>
+                </TabList>
+                <TabPanel>
+                    <GridMain/>
+                </TabPanel>
+                <TabPanel>
+                    <Table  columns={columns} data={data}/>
+                </TabPanel>
+                <TabPanel>
+                <My/>
+            </TabPanel>
+            </Tabs>
         </div>
     )
 }
